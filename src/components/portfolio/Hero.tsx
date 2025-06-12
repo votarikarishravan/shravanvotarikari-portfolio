@@ -56,7 +56,7 @@ const Hero = () => {
               Explore My Work
               <ArrowDown className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="border-white/40 text-white hover:bg-white/15 backdrop-blur-md shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
+            <Button variant="outline" size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="border-white/40 text-indigo-700 hover:bg-white/15 backdrop-blur-md shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
               <Download className="mr-2 h-4 w-4" />
               Download CV
             </Button>
