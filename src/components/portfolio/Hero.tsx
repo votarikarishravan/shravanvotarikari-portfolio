@@ -12,54 +12,64 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Professional background image with overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
-        }}
-      ></div>
-      
-      {/* Smooth gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/85 via-purple-800/80 to-cyan-700/75"></div>
-      
-      {/* Subtle animated elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mix-blend-soft-light filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-cyan-400 to-teal-400 rounded-full mix-blend-soft-light filter blur-3xl animate-pulse animation-delay-2000"></div>
-      </div>
-      
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="w-32 h-32 bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-md rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl border border-white/30">
-              <span className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"><img src="Shravan.png" alt="Profile" className="rounded-full w-40 h-40 mx-auto mb-4" /></span>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Content */}
+            <div className="space-y-8">
+              {/* Main heading */}
+              <div className="space-y-4">
+                <h1 className="text-6xl lg:text-7xl font-bold text-gray-900">
+                  Hello
+                </h1>
+                <p className="text-lg text-gray-600 max-w-md">
+                  — It's Shravan Votarikari, an Integration Developer & Java Backend Specialist
+                </p>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-8">
+                <Button 
+                  size="lg" 
+                  onClick={scrollToAbout} 
+                  className="bg-gray-900 hover:bg-gray-800 text-white font-medium px-8 py-3"
+                >
+                  Explore My Work
+                  <ArrowDown className="ml-2 h-4 w-4" />
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
+                  className="border-gray-300 text-gray-700 hover:bg-gray-50 font-medium px-8 py-3"
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  Download CV
+                </Button>
+              </div>
+
+              {/* Scroll indicator */}
+              <div className="pt-12">
+                <p className="text-sm text-gray-500 flex items-center gap-2">
+                  Scroll down 
+                  <ArrowDown className="h-3 w-3" />
+                </p>
+              </div>
             </div>
-          </div>
-          
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-            <span className="text-white drop-shadow-2xl">Shravan Votarikari</span>
-          </h1>
-          
-          <p className="text-xl lg:text-2xl text-white/95 mb-4 drop-shadow-lg">
-            Integration Developer & Java Backend Specialist
-          </p>
-          
-          <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto drop-shadow-lg">
-            Building robust enterprise solutions with 3+ years of experience in IBM middleware technologies, 
-            Java frameworks, and cloud platforms.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={scrollToAbout} className="bg-white/95 hover:bg-white text-indigo-700 font-semibold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-              Explore My Work
-              <ArrowDown className="ml-2 h-4 w-4" />
-            </Button>
-            <Button variant="outline" size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="border-white/40 text-indigo-700 hover:bg-white/15 backdrop-blur-md shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
-              <Download className="mr-2 h-4 w-4" />
-              Download CV
-            </Button>
+
+            {/* Right side - Profile Image */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                <div className="w-80 h-96 lg:w-96 lg:h-[500px] bg-gray-100 rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="/Shravan.png"
+                    alt="Shravan Votarikari - Profile" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
