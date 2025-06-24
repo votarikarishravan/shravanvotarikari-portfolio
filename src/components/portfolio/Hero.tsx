@@ -61,7 +61,7 @@ const Hero = () => {
             {/* Right side - Profile Image */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-96 lg:w-96 lg:h-[500px] bg-gray-100 rounded-2xl overflow-hidden shadow-2xl">
+                <div className="w-85 h-96 lg:w-96 lg:h-[500px] bg-gray-100 rounded-2xl overflow-hidden shadow-2xl">
                   <img 
                     src="/Shravan.png"
                     alt="Shravan Votarikari - Profile" 
