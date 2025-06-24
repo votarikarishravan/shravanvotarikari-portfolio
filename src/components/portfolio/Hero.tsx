@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <div className="w-32 h-32 bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-md rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl border border-white/30">
-              <span className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"><img src="/public/DSC_0968.JPG" alt="Profile" className="rounded-full w-40 h-40 mx-auto mb-4" /></span>
+              <span className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"><img src="DSC_0968.JPG" alt="Profile" className="rounded-full w-40 h-40 mx-auto mb-4" /></span>
             </div>
           </div>
           
