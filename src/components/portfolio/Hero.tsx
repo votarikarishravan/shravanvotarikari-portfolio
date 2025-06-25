@@ -11,6 +11,15 @@ const Hero = () => {
     }
   };
 
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // Assuming your resume is named resume.pdf in the public directory
+    link.download = 'Shravan_Votarikari_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-6 py-20 relative z-10">
@@ -41,7 +50,7 @@ const Hero = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
+                  onClick={downloadResume}
                   className="border-gray-300 text-gray-700 hover:bg-gray-50 font-medium px-8 py-3"
                 >
                   <Download className="mr-2 h-4 w-4" />
@@ -61,7 +70,7 @@ const Hero = () => {
             {/* Right side - Profile Image */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-85 h-96 lg:w-96 lg:h-[500px] bg-gray-100 rounded-2xl overflow-hidden shadow-2xl">
+                <div className="w-80 h-96 lg:w-96 lg:h-[500px] bg-gray-100 rounded-2xl overflow-hidden shadow-2xl">
                   <img 
                     src="/Shravan.png"
                     alt="Shravan Votarikari - Profile" 
